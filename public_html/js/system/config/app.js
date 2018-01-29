@@ -39,30 +39,8 @@ var trolleyes = angular.module('myApp', [
     'Directives',
     'systemControllers',
     'usuarioControllers',
-    'tipousuarioControllers',
-    'pedidoControllers',
-    'destinoaltaControllers',
-    'productoControllers',
-    'linea_pedidoControllers',
-    'sexoControllers',
-    'circunstanciasaltaControllers',
-    'episodioControllers',
-    'tipopagoControllers',
-    'tiposervicioControllers',
-    'especialidadControllers',
-    'modalidadepisodioControllers',
-    'tipodependeciaControllers',
-    'tipoepisodioControllers',
-    'facturaControllers',
-    'servicioControllers',
-    'grupoControllers',
-    'cursoControllers',
-    'pacienteControllers',
-    'medicoControllers',
-    'dependenciaControllers',
-    'centroControllers',
-    'centrosanitarioControllers',
-    'categoriaprofesionalControllers',
+    'tipousuarioControllers',    
+    'tipopagoControllers',   
     'ui.bootstrap',
     'ngSanitize',
     'chart.js'
@@ -76,35 +54,7 @@ var moduloFiltros = angular.module('Filters', []);
 //-------------
 var moduloUsuario = angular.module('usuarioControllers', []);
 var moduloTipousuario = angular.module('tipousuarioControllers', []);
-var moduloPedido = angular.module('pedidoControllers', []);
-var moduloDestinoalta = angular.module('destinoaltaControllers', []);
-var moduloProducto = angular.module('productoControllers', []);
-var moduloLinea_pedido = angular.module('linea_pedidoControllers', []);
-var moduloTipoepisodio = angular.module('tipoepisodioControllers', []);
-var moduloSexo = angular.module('sexoControllers', []);
-var moduloCircunstanciasalta = angular.module('circunstanciasaltaControllers', []);
-var moduloEpisodio = angular.module('episodioControllers', []);
 var moduloTipopago = angular.module('tipopagoControllers', []);
-var moduloEspecialidad = angular.module('especialidadControllers', []);
-var moduloPaciente = angular.module('pacienteControllers', []);
-var moduloMedico = angular.module('medicoControllers', []);
-var moduloDependencia = angular.module('dependenciaControllers', []);
-
-var moduloFactura = angular.module('facturaControllers', []);
-
-var moduloTiposervicio = angular.module('tiposervicioControllers', []);
-var moduloModalidadepisodio = angular.module('modalidadepisodioControllers', []);
-var moduloServicio = angular.module('servicioControllers', []);
-//------------
-var moduloTipodependencia = angular.module('tipodependeciaControllers', []);
-var moduloGrupo= angular.module('grupoControllers', []);
-var moduloCurso= angular.module('cursoControllers', []);
-var moduloPaciente = angular.module('pacienteControllers', []);
-var moduloCentro= angular.module('centroControllers', []);
-var moduloCentrosanitario= angular.module('centrosanitarioControllers', []);
-var moduloCategoriaprofesional= angular.module('categoriaprofesionalControllers', []);
-var moduloDependencia = angular.module('dependenciaControllers', []);
-
 
 
 

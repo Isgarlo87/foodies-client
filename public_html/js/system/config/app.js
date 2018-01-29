@@ -40,7 +40,13 @@ var trolleyes = angular.module('myApp', [
     'systemControllers',
     'usuarioControllers',
     'tipousuarioControllers',    
-    'tipopagoControllers',   
+    'tipopagoControllers',
+    'facturaControllers',
+    'clienteControllers',
+    'bocetoControllers',
+    'servicioControllers',
+    'sesionControllers',
+    'galeriaControllers',
     'ui.bootstrap',
     'ngSanitize',
     'chart.js'
@@ -55,6 +61,12 @@ var moduloFiltros = angular.module('Filters', []);
 var moduloUsuario = angular.module('usuarioControllers', []);
 var moduloTipousuario = angular.module('tipousuarioControllers', []);
 var moduloTipopago = angular.module('tipopagoControllers', []);
+var moduloFactura = angular.module('facturaControllers', []);
+var moduloCliente = angular.module('clienteControllers', []);
+var moduloBoceto = angular.module('bocetoControllers', []);
+var moduloServicio = angular.module('servicioControllers', []);
+var moduloSesion = angular.module('sesionControllers', []);
+var moduloGaleria = angular.module('galeriaControllers', []);
 
 
 

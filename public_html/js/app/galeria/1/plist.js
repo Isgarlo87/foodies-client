@@ -26,10 +26,10 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloCliente.controller('ClientePList1Controller',
+moduloGaleria.controller('GaleriaPList1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
-                $scope.ob = "cliente";
+                $scope.ob = "galeria";
                 $scope.op = "plist";
                 $scope.profile = 1;
                 //----

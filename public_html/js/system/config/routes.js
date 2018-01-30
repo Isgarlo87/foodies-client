@@ -90,31 +90,61 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/cliente/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ClienteNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/cliente/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ClienteEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/cliente/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'ClienteRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
-         //--------       
+        $routeProvider.when('/cliente/1/tipopago/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ClienteXtipopagoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/cliente/1/tipopago/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ClienteXtipopagoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/cliente/1/tipopago/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ClienteXtipopagoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+       
+        
+        
+        
+        //--------       
         $routeProvider.when('/servicio/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'ServicioView1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/servicio/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ServicioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/servicio/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/servicio/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/servicio/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'ServicioRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/factura/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ServicioXfacturaPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/factura/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioXfacturaNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/factura/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioXfacturaEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/cliente/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ServicioXclientePList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/cliente/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioXclienteNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/cliente/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioXclienteEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/usuario/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ServicioXusuarioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/usuario/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioXusuarioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/servicio/1/usuario/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ServicioXusuarioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+
         //--------       
         $routeProvider.when('/sesion/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'SesionView1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/sesion/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'SesionPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/sesion/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'SesionNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/sesion/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'SesionEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/sesion/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'SesionRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/sesion/1/servicio/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'SesionXservicioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/sesion/1/servicio/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'SesionXservicioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/sesion/1/servicio/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'SesionXservicioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+
         //--------       
         $routeProvider.when('/boceto/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'BocetoView1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/boceto/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'BocetoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/boceto/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'BocetoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/boceto/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'BocetoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/boceto/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'BocetoRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/boceto/1/servicio/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'BocetoXservicioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/boceto/1/servicio/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'BocetoXservicioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/boceto/1/servicio/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'BocetoXservicioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+
+        
+        
         //--------       
         $routeProvider.when('/galeria/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'GaleriaView1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/galeria/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'GaleriaPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/galeria/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'GaleriaNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/galeria/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'GaleriaEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/galeria/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'GaleriaRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
-       
+        $routeProvider.when('/galeria/1/servicio/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'GaleriaXservicioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/galeria/1/servicio/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'GaleriaXservicioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/galeria/1/servicio/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'GaleriaXservicioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+
        
         $routeProvider.otherwise({redirectTo: '/'});
     }]);

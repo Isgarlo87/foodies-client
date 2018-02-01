@@ -49,7 +49,9 @@ moduloSesion.controller('SesionSelection1Controller',
                 $scope.visibles.descripcion = true;
 
                 $scope.filterString = [{'name': 'descripcion', 'longname': 'Descripción'}];
-                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}];
+                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'},{'name': 'id_servicio', 'longname': 'Identificador Servicio'},{'name': 'cantidad', 'longname': 'Cantidad'}];
+                $scope.filterDate = [{'name': 'fecha_inicio', 'longname': 'Fecha Inicio'},{'name': 'fecha_fin', 'longname': 'Fecha Fin'}];
+
 
                 $scope.closeForm = function (id) {
                     $modalInstance.close(id);

@@ -48,9 +48,9 @@ moduloCliente.controller('ClienteSelection2Controller',
                 $scope.visibles.id = true;
                 $scope.visibles.descripcion = true;
 
-                $scope.filterString = [{'name': 'descripcion', 'longname': 'Descripción'}];
-                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}];
-
+                $scope.filterString = [{'name': 'nombre', 'longname': 'Nombre'}, {'name': 'primer_apellido', 'longname': 'Primer Apellido'}, {'name': 'segundo_apellido', 'longname': 'Segundo Apellido'}, {'name': 'dni', 'longname': 'DNI'}, {'name': 'direccion', 'longname': 'Direccion'}, {'name': 'ciudad', 'longname': 'Ciudad'}, {'name': 'codigo_postal', 'longname': 'Codigo Postal'}, {'name': 'provincia', 'longname': 'Provincia'}, {'name': 'email', 'longname': 'Email'},{'name': 'telefono', 'longname': 'Telefono'}];
+                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}, {'name': 'id_tipopago', 'longname': 'Identificador Tipo Pago'},{'name': 'descuento', 'longname': 'Descuento'}];
+             
                 $scope.closeForm = function (id) {
                     $modalInstance.close(id);
                 };

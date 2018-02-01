@@ -49,7 +49,8 @@ moduloFactura.controller('FacturaSelection2Controller',
                 $scope.visibles.descripcion = true;
 
                 $scope.filterString = [{'name': 'descripcion', 'longname': 'Descripción'}];
-                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}];
+                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'},{'name': 'importe', 'longname': 'Importe'}];
+                $scope.filterDate = [{'name': 'fecha_factura', 'longname': 'Fecha Factura'}];
 
                 $scope.closeForm = function (id) {
                     $modalInstance.close(id);

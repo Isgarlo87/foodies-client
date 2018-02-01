@@ -48,8 +48,10 @@ moduloGaleria.controller('GaleriaSelection1Controller',
                 $scope.visibles.id = true;
                 $scope.visibles.descripcion = true;
 
-                $scope.filterString = [{'name': 'descripcion', 'longname': 'Descripción'}];
-                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}];
+                $scope.filterString = [{'name': 'enlace', 'longname': 'Enlace'}];
+                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'},{'name': 'id_servicio', 'longname': 'Identificador Servicio'}];
+                $scope.filterDate = [{'name': 'fecha_imagen', 'longname': 'Fecha Imagen'}];
+
 
                 $scope.closeForm = function (id) {
                     $modalInstance.close(id);

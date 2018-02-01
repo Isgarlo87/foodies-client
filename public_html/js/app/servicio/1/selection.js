@@ -48,8 +48,8 @@ moduloServicio.controller('ServicioSelection1Controller',
                 $scope.visibles.id = true;
                 $scope.visibles.descripcion = true;
 
-                $scope.filterString = [{'name': 'descripcion', 'longname': 'Descripción'}];
-                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}];
+                $scope.filterString = [{'name': 'comentario', 'longname': 'Comentario'}];
+                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'},{'name': 'id_factura', 'longname': 'Identificador Factura'},{'name': 'id_cliente', 'longname': 'Identificador Cliente'},{'name': 'id_usuario', 'longname': 'Identificador Usuario'}];
 
                 $scope.closeForm = function (id) {
                     $modalInstance.close(id);

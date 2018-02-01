@@ -48,9 +48,9 @@ moduloBoceto.controller('BocetoSelection2Controller',
                 $scope.visibles.id = true;
                 $scope.visibles.descripcion = true;
 
-                $scope.filterString = [{'name': 'descripcion', 'longname': 'Descripción'}];
-                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}];
-
+               $scope.filterString = [{'name': 'enlace', 'longname': 'Enlace'}, {'name': 'descripcion', 'longname': 'Descripcion'}, {'name': 'dimension', 'longname': 'Dimension'}];
+                $scope.filterNumber = [{'name': 'id', 'longname': 'Identificador'}, {'name': 'id_servicio', 'longname': 'Identificador Servicio'}, {'name': 'precio', 'longname': 'Precio'}];
+                
                 $scope.closeForm = function (id) {
                     $modalInstance.close(id);
                 };

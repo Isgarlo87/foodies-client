@@ -71,7 +71,8 @@ THE SOFTWARE.
                                     </label>
                                     <select class="navbar-form navbar-left" ng-model="filterType" convert-to-number id="filterSelection">
                                         <option value="0">Filtrar por descripcion</option>
-                                        <option value="1">Filtrar por id</option>
+                                        <option value="1">Filtrar por número</option>
+                                        <option value="2">Filtrar por fecha</option>
                                     </select>
                                 </form>
                             </div>
@@ -94,6 +95,16 @@ THE SOFTWARE.
                                         orderparams="orderParams"
                                         filterparams="filterParams">
                                     </plistfilterbynumberspa>
+                                </div>
+                                <p></p>
+                                <div ng-show="filterType == 2">
+                                    <plistfilterbydatespa                                     
+                                        fields="filterDate"
+                                        rpp="rpp"
+                                        numpage="numpage"
+                                        orderparams="orderParams"
+                                        filterparams="filterParams">
+                                    </plistfilterbydatespa>
                                 </div>
                             </div>
                         </div>

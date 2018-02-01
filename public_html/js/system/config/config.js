@@ -25,13 +25,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-trolleyes.config(['$locationProvider', function ($locationProvider) {
+foodies.config(['$locationProvider', function ($locationProvider) {
         $locationProvider.html5Mode({
             //requireBase: false,
             enabled: true
         });
     }]);
 //-------------
-trolleyes.config(['$httpProvider', function ($httpProvider) {
+foodies.config(['$httpProvider', function ($httpProvider) {
         $httpProvider.defaults.withCredentials = true;
     }]);

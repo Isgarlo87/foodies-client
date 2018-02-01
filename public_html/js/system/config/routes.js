@@ -41,7 +41,7 @@ var authenticationEmpleadoPromise = function (sessionService) {
 };
 
 
-trolleyes.config(['$routeProvider', function ($routeProvider) {
+foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {templateUrl: 'js/system/shared/home.html', controller: 'HomeController', resolve: {auth: anyAuthenticationPromise}});
         //------------
         $routeProvider.when('/login', {templateUrl: 'js/system/shared/login.html', controller: 'LoginController', resolve: {auth: anyAuthenticationPromise}});

@@ -6,4 +6,4 @@ Options FollowSymLinks
   RewriteRule ^ - [L]
 
   # If the requested resource doesn't exist, use index.html
-  RewriteRule ^ /tatuaje/public_html/index.html
+  RewriteRule ^ /foodies/public_html/index.html

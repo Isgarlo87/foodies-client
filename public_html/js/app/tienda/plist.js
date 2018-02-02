@@ -26,10 +26,10 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloUsuario.controller('UsuarioPlist1Controller',
+moduloTienda.controller('TiendaPlist1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
-                $scope.ob = "usuario";
+                $scope.ob = "tienda";
                 $scope.op = "plist";
                 $scope.profile = 1;
                 //---

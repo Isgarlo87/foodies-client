@@ -26,7 +26,7 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloUsuario.controller('UsuarioXtipousuarioPList1Controller',
+moduloUsuario.controller('UsuarioXtipousuarioPlist1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
                 $scope.ob = "usuario";

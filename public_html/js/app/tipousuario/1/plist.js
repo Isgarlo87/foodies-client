@@ -26,7 +26,7 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloTipousuario.controller('TipousuarioPList1Controller',
+moduloTipousuario.controller('TipousuarioPlist1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
                 $scope.ob = "tipousuario";

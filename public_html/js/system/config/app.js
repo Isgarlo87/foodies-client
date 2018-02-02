@@ -40,13 +40,13 @@ var foodies = angular.module('myApp', [
     'systemControllers',
     'usuarioControllers',
     'tipousuarioControllers',    
-    'tipopagoControllers',
-    'facturaControllers',
-    'clienteControllers',
-    'bocetoControllers',
-    'servicioControllers',
-    'sesionControllers',
-    'galeriaControllers',
+    'tipoplatoControllers',
+    'tiendaControllers',
+    'ticketControllers',
+    'platoControllers',
+    'pedidoControllers',
+    'lineapedidoControllers',
+    'extrasControllers',
     'ui.bootstrap',
     'ngSanitize',
     'chart.js'
@@ -60,13 +60,13 @@ var moduloFiltros = angular.module('Filters', []);
 //-------------
 var moduloUsuario = angular.module('usuarioControllers', []);
 var moduloTipousuario = angular.module('tipousuarioControllers', []);
-var moduloTipopago = angular.module('tipopagoControllers', []);
-var moduloFactura = angular.module('facturaControllers', []);
-var moduloCliente = angular.module('clienteControllers', []);
-var moduloBoceto = angular.module('bocetoControllers', []);
-var moduloServicio = angular.module('servicioControllers', []);
-var moduloSesion = angular.module('sesionControllers', []);
-var moduloGaleria = angular.module('galeriaControllers', []);
+var moduloTipoplato = angular.module('tipoplatoControllers',[]);
+var moduloTienda = angular.module('tiendaControllers',[]);
+var moduloTicket = angular.module('ticketControllers',[]);
+var moduloPlato = angular.module('platoControllers',[]);
+var moduloPedido = angular.module('pedidoControllers',[]);
+var moduloLineapedido = angular.module('lineapedidoControllers',[]);
+var moduloExtras = angular.module('extrasControllers',[]);
 
 
 

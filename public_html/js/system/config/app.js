@@ -47,6 +47,7 @@ var foodies = angular.module('myApp', [
     'pedidoControllers',
     'lineapedidoControllers',
     'extrasControllers',
+    'carritoControllers',
     'ui.bootstrap',
     'ngSanitize',
     'chart.js'
@@ -67,6 +68,7 @@ var moduloPlato = angular.module('platoControllers',[]);
 var moduloPedido = angular.module('pedidoControllers',[]);
 var moduloLineapedido = angular.module('lineapedidoControllers',[]);
 var moduloExtras = angular.module('extrasControllers',[]);
+var moduloCarrito = angular.module('carritoControllers', []);
 
 
 

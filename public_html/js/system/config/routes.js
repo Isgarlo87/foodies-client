@@ -89,6 +89,9 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/ticket/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'TicketEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/ticket/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'TicketRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/ticket/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'TicketPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/ticket/1/xpedido/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'TicketXpedidoPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/ticket/1/xpedido/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'TicketXpedidoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/ticket/1/xpedido/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'TicketXpedidoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         //------------Tabla Plato Perfil 1
         $routeProvider.when('/plato/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'PlatoView1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/plato/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PlatoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
@@ -107,9 +110,6 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/pedido/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/pedido/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'PedidoRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/pedido/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/pedido/1/xticket/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXticketPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/pedido/1/xticket/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoXticketNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/pedido/1/xticket/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoXticketEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/pedido/1/xtienda/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXtiendaPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/pedido/1/xtienda/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoXtiendaNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/pedido/1/xtienda/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoXtiendaEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});

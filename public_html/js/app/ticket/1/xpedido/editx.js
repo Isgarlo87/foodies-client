@@ -27,15 +27,17 @@
  */
 'use strict';
 
-moduloPedido.controller('PedidoXticketNew1Controller',
+moduloTicket.controller('TicketXpedidoEdit1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', '$filter', '$uibModal', 'sessionService', '$route', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService) {
-                $scope.ob = "pedido";
-                $scope.op = "newx";
+                $scope.ob = "ticket";
+                $scope.op = "editx";
                 $scope.profile = 1;
+                //----
+                $scope.id = $routeParams.id;
                 //---
-                $scope.xob = "ticket";
-                $scope.xid = $routeParams.id;
+                $scope.xob = "pedido";
+                $scope.xid = $routeParams.xid;
                 //---
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
@@ -51,28 +53,15 @@ moduloPedido.controller('PedidoXticketNew1Controller',
                     }).catch(function (data) {
                     });
                 }
-                ;
-                serverCallService.getMeta($scope.ob).then(function (response) {
+
+
+                serverCallService.getOne($scope.ob, $scope.id).then(function (response) {
                     if (response.status == 200) {
                         if (response.data.status == 200) {
                             $scope.status = null;
-                            //--For every foreign key create obj inside bean tobe filled...
-                            $scope.bean = {};
-                            response.data.json.metaProperties.forEach(function (property) {
-                                if (property.Type == 'ForeignObject') {
-                                    $scope.bean[property.Name] = {};
-                                    $scope.bean[property.Name].data = {};
-                                    if (property.Name == 'obj_' + $scope.xob) {
-                                        $scope.bean[property.Name].data.id = $scope.xid;
-                                    } else {
-                                        $scope.bean[property.Name].data.id = 0;
-                                    }
-                                }
-                            });
-                            //--
+                            $scope.bean = response.data.json.data;
                             $scope.metao = response.data.json.metaObject;
                             $scope.metap = response.data.json.metaProperties;
-
                         } else {
                             $scope.status = "Error en la recepción de datos del servidor";
                         }

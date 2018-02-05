@@ -26,14 +26,14 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloPedido.controller('PedidoXticketPlist1Controller',
+moduloTicket.controller('TicketXpedidoPlist3Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
-                $scope.ob = "pedido";
+                $scope.ob = "ticket";
                 $scope.op = "plistx";
-                $scope.profile = 1;
+                $scope.profile = 3;
                 //----
-                $scope.xob = "ticket";
+                $scope.xob = "pedido";
                 $scope.xid = $routeParams.id;
                 //----
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;

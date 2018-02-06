@@ -28,10 +28,10 @@
 
 'use strict';
 
-moduloPlato.controller('PlatoSelection3Controller',
+moduloTipoplato.controller('TipoplatoSelection3Controller',
         ['$scope', '$uibModalInstance', 'serverCallService', '$location', 'toolService',
             function ($scope, $modalInstance, serverCallService, $location, toolService) {
-                $scope.ob = 'plato';
+                $scope.ob = 'tipoplato';
                 $scope.op = "selection";
                 //---
                 $scope.numpage = 1;

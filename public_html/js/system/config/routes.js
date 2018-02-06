@@ -165,6 +165,7 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/carrito/3/buy/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/buy.html', controller: 'CarritoBuy3Controller', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/carrito/3/add/:id', {templateUrl: 'js/app/carrito/1/add.html', controller: 'CarritoAdd3Controller', resolve: {auth: authenticationClientePromise}});
         //------------Tabla Extras Perfil 3
+        $routeProvider.when('/extras/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ExtrasPlist3Controller', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/extras/3/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'ExtrasView3Controller', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/extras/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ExtrasPlist3Controller', resolve: {auth: authenticationClientePromise}});
         //------------Tabla Pedido Perfil 3

@@ -142,5 +142,46 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/carrito/1/add/:id', {templateUrl: 'js/app/carrito/1/add.html', controller: 'CarritoAdd1Controller', resolve: {auth: authenticationAdministratorPromise}});
         //----------------FIN PERFIL 1
 
+        //------------Tabla Lineapedido Perfil 2
+        $routeProvider.when('/lineapedido/2/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'LineapedidoView2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/lineapedido/2/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'LineapedidoPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/lineapedido/2/xpedido/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'LineapedidoXpedidoPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/lineapedido/2/xplato/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'LineapedidoXplatoPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        //------------Tabla Pedido Perfil 2
+        $routeProvider.when('/pedido/2/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'PedidoView2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/pedido/2/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/pedido/2/xtienda/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXtiendaPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/pedido/2/xusuario/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXusuarioPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        //------------Tabla Ticket Perfil 2
+        $routeProvider.when('/ticket/2/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'TicketView2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/ticket/2/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'TicketPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        $routeProvider.when('/ticket/2/xpedido/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'TicketXpedidoPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
+        //----------------FIN PERFIL 2
+
+        //------------Tabla Carrito Perfil 3
+        $routeProvider.when('/carrito/3/plist/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/plist.html', controller: 'CarritoPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/3/remove/:id', {templateUrl: 'js/app/carrito/1/remove.html', controller: 'CarritoRemove3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/3/empty/', {templateUrl: 'js/app/carrito/1/empty.html', controller: 'CarritoEmpty3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/3/buy/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/buy.html', controller: 'CarritoBuy3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/3/add/:id', {templateUrl: 'js/app/carrito/1/add.html', controller: 'CarritoAdd3Controller', resolve: {auth: authenticationClientePromise}});
+        //------------Tabla Extras Perfil 3
+        $routeProvider.when('/extras/3/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'ExtrasView3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/extras/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ExtrasPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        //------------Tabla Pedido Perfil 3
+        $routeProvider.when('/pedido/3/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'PedidoView3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/pedido/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/pedido/3/xtienda/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXtiendaPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/pedido/3/xusuario/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXusuarioPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        //------------Tabla Plato Perfil 3
+        $routeProvider.when('/plato/3/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'PlatoView3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/plato/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PlatoPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/plato/3/xextras/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PlatoXextrasPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/plato/3/xtipoplato/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PlatoXtipoplatoPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        //------------Tabla Ticket Perfil 3
+        $routeProvider.when('/ticket/3/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'TicketView3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/ticket/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'TicketPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/ticket/3/xpedido/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'TicketXpedidoPlist3Controller', resolve: {auth: authenticationClientePromise}});
+        //------------FIN PERFIL 3
+
         $routeProvider.otherwise({redirectTo: '/'});
     }]);

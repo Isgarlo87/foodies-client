@@ -134,7 +134,7 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/extras/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ExtrasEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/extras/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'ExtrasRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/extras/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ExtrasPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        //------------Carrito Perfil 1
+        //------------Carrito Perfil 1 -Not working
         $routeProvider.when('/carrito/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'CarritoPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/carrito/1/remove/:id', {templateUrl: 'js/app/carrito/1/remove.html', controller: 'CarritoRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/carrito/1/empty/', {templateUrl: 'js/app/carrito/1/empty.html', controller: 'CarritoEmpty1Controller', resolve: {auth: authenticationAdministratorPromise}});
@@ -158,7 +158,7 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/ticket/2/xpedido/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'TicketXpedidoPlist2Controller', resolve: {auth: authenticationEmpleadoPromise}});
         //----------------FIN PERFIL 2
 
-        //------------Tabla Carrito Perfil 3
+        //------------Tabla Carrito Perfil 3 - not working
         $routeProvider.when('/carrito/3/plist/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/plist.html', controller: 'CarritoPlist3Controller', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/carrito/3/remove/:id', {templateUrl: 'js/app/carrito/1/remove.html', controller: 'CarritoRemove3Controller', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/carrito/3/empty/', {templateUrl: 'js/app/carrito/1/empty.html', controller: 'CarritoEmpty3Controller', resolve: {auth: authenticationClientePromise}});

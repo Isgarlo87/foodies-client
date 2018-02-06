@@ -1,7 +1,9 @@
+
 'use strict';
+
 moduloCarrito.controller('CarritoPlist1Controller',
-        ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService', 'objectService',
-             function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
+        ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
+            function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
                 $scope.ob = "carrito";
                 $scope.op = "plist";
                 $scope.profile = 1;

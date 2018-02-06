@@ -7,9 +7,9 @@
 
 'use strict';
 
-moduloCarrito.controller('CarritoAdd1Controller',
-        ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService','objectService',
-            function ($scope, $routeParams, serverCallService, $location, sessionService, constantService,objectService) {
+moduloCarrito.controller('CarritoPlist1Controller',
+        ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
+            function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
                 $scope.ob = "carrito";
                 $scope.op = "add";
                 $scope.profile = 1;

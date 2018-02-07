@@ -1,11 +1,11 @@
 'use strict';
 moduloCarrito.controller('CarritoPlist1Controller',
-  ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
-            function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {        $scope.ob = "carrito";
+        ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
+            function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
+                $scope.ob = "carrito";
                 $scope.op = "plist";
                 $scope.profile = 1;
-                //---
-                //---
+ //---
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
                 //----
                 $scope.numpage = toolService.checkDefault(1, $routeParams.page);
@@ -19,7 +19,7 @@ moduloCarrito.controller('CarritoPlist1Controller',
                 $scope.debugging = constantService.debugging();
                 //---
                 function getDataFromServer() {
-                    serverCallService.getCount($scope.ob, $scope.filterParams).then(function (response) {
+                    serverCallService.list($scope.ob, $scope.filterParams).then(function (response) {
                         if (response.status == 200) {
                             $scope.registers = response.data.json;
                             $scope.pages = toolService.calculatePages($scope.rpp, $scope.registers);

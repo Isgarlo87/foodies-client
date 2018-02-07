@@ -1,5 +1,5 @@
 'use strict';
-moduloCarrito.controller('CarritoList1Controller',
+moduloCarrito.controller('CarritoPlist1Controller',
         ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService',
             function ($scope, $routeParams, serverCallService, $location, sessionService, constantService) {
                 $scope.ob = "carrito";

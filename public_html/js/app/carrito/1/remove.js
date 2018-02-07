@@ -16,10 +16,10 @@ moduloCarrito.controller('CarritoRemove1Controller',
                 $scope.objectService = objectService;
                 //---
                 $scope.remove = function () {
-                    serverCallService.remove($scope.ob, $scope.id_producto).then(function (response) {
+                    serverCallService.remove($scope.ob, $scope.id_plato).then(function (response) {
                         if (response.status == 200) {
                             if (response.data.status == 200) {                                
-                                    $scope.status = "El registro con id=" + $scope.id_producto + " se ha eliminado.";
+                                    $scope.status = "El registro con id=" + $scope.id_plato + " se ha eliminado.";
                                 } else {
                                     $scope.status = "Error en el borrado de datos del servidor";
                                 }

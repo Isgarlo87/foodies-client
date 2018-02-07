@@ -108,6 +108,17 @@ moduloServicios.factory('serverCallService',
                     getMeta: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getmetadata', 'GET', '');
                     },
+                    list: function (strObject) {
+                        return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=list', 'GET', '');
+                    },
+
+                    empty: function (strObject) {
+                        return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=empty', 'GET', '');
+                    },
+
+                    buy: function (strObject) {
+                        return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=buy', 'GET', '');
+                    },
                     getSession: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getsessionstatus', 'GET', '');
                     }

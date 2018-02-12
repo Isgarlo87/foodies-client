@@ -36,7 +36,7 @@ moduloPedido.controller('PedidoXtiendaPlist2Controller',
                 $scope.xob = "tienda";
                 $scope.xid = $routeParams.id;
                 //----
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
+                $scope.url = $scope.ob + '/' + $scope.profile + '/xtienda/' + $scope.op + '/' + $scope.xid;
                 //----
                 $scope.numpage = toolService.checkDefault(1, $routeParams.page);
                 $scope.rpp = toolService.checkDefault(10, $routeParams.rpp);

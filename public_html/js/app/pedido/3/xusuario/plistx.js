@@ -36,7 +36,7 @@ moduloPedido.controller('PedidoXusuarioPlist3Controller',
                 $scope.xob = "usuario";
                 $scope.xid = $routeParams.id;
                 //----
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
+                $scope.url = $scope.ob + '/' + $scope.profile + '/xusuario/' + $scope.op + '/' + $scope.xid;
                 //----
                 $scope.numpage = toolService.checkDefault(1, $routeParams.page);
                 $scope.rpp = toolService.checkDefault(10, $routeParams.rpp);

@@ -7,16 +7,15 @@
 
 'use strict';
 
-moduloCarrito.controller('CarritoAdd1Controller',
+moduloCarrito.controller('CarritoAddController',
         ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService','objectService',
             function ($scope, $routeParams, serverCallService, $location, sessionService, constantService,objectService) {
                 $scope.ob = "carrito";
                 $scope.op = "add";
-                $scope.profile = 1;
                 //---
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
+                $scope.url = $scope.ob + '/' + $scope.op;
                 //---
                 $scope.bean = {};
                 $scope.bean.cantidad = 0;

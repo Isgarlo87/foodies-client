@@ -1,15 +1,14 @@
 'use strict';
 
-moduloCarrito.controller('CarritoRemove1Controller',
+moduloCarrito.controller('CarritoRemoveController',
         ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService','objectService',
             function ($scope, $routeParams, serverCallService, $location, sessionService, constantService,objectService) {
                 $scope.ob = "carrito";
                 $scope.op = "remove";
-                $scope.profile = 1;
                 //---
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
+                $scope.url = $scope.ob + '/' + $scope.op;
                 //---
                 $scope.id_producto = $routeParams.id_producto;
                 //---

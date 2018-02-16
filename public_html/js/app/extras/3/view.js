@@ -37,6 +37,7 @@ moduloExtras.controller('ExtrasView3Controller',
                 //---
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
                 //---
+                $scope.onlyview = true;
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
                 //---

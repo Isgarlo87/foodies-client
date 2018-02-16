@@ -135,11 +135,11 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/extras/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'ExtrasRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/extras/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ExtrasPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
         //------------Carrito Perfil 1 -Not working
-        $routeProvider.when('/carrito/1/plist/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/plist.html', controller: 'CarritoPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/carrito/1/remove/:id', {templateUrl: 'js/app/carrito/1/remove.html', controller: 'CarritoRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/carrito/1/empty/', {templateUrl: 'js/app/carrito/1/empty.html', controller: 'CarritoEmpty1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/carrito/1/buy/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/buy.html', controller: 'CarritoBuy1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/carrito/1/add/:id', {templateUrl: 'js/app/carrito/1/add.html', controller: 'CarritoAdd1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/carrito/plist/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/plist.html', controller: 'CarritoPlistController', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/remove/:id', {templateUrl: 'js/app/carrito/1/remove.html', controller: 'CarritoRemoveController', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/empty/', {templateUrl: 'js/app/carrito/1/empty.html', controller: 'CarritoEmptyController', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/buy/:page?/:rpp?', {templateUrl: 'js/app/carrito/1/buy.html', controller: 'CarritoBuyController', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/add/:id', {templateUrl: 'js/app/carrito/1/add.html', controller: 'CarritoAddController', resolve: {auth: authenticationClientePromise}});
         //----------------FIN PERFIL 1
 
         //------------Tabla Lineapedido Perfil 2

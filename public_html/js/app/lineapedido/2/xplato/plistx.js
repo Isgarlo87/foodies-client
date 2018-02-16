@@ -45,6 +45,7 @@ moduloLineapedido.controller('LineapedidoXplatoPlist2Controller',
                 $scope.orderParams = toolService.checkEmptyString($routeParams.order);
                 $scope.filterParams = toolService.checkEmptyString($routeParams.filter);
                 //---
+                 $scope.onlyview = true;
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
                 //---

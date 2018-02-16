@@ -48,7 +48,7 @@
 
         <div id="navbar" class="navbar-collapse collapse" >
             <ul class="nav navbar-nav" id="appMenu">
-                <li ng-class="{ 'active': mn.isActive('/home')}"><a href="home">Home</a></li>
+                <li ng-class="{ 'active': mn.isActive('/home')}"><a href="home">Inicio</a></li>
 
                 <!-- Administración ------------------------------------------- -->
                 <li class="dropdown" ng-if="mn.session_info.obj_tipousuario.data.id == 1"
@@ -146,11 +146,9 @@
 
 
 
-            <!------------
-            //---------- USUARIO ------
-            ----------------- -->
+            <!------- USUARIO ------ -->
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">                              
                 <!-- <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">

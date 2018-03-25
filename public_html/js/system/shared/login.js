@@ -35,7 +35,6 @@ moduloSistema.controller('LoginController',
                 $scope.session_info = sessionService.getSessionInfo();
                 $scope.isSessionActive = sessionService.isSessionActive();
                 $scope.debugging = constantService.debugging();
-                $scope.checkGrupoStatusMsg = "";
                 $scope.fill = function (nombre) {
                     if (constantService.debugging()) {
                         $scope.user.username = nombre;

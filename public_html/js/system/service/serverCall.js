@@ -108,6 +108,9 @@ moduloServicios.factory('serverCallService',
                     getMeta: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getmetadata', 'GET', '');
                     },
+                    add: function (strObject, cantidad, idForeign){
+                      return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=add' +'&cantidad=' + cantidad +'&id='+ idForeign, 'GET', '');
+                    },
                     list: function (strObject) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=list', 'GET', '');
                     },

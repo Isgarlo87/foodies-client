@@ -8,8 +8,8 @@
 'use strict';
 
 moduloCarrito.controller('CarritoAddController',
-        ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService','objectService',
-            function ($scope, $routeParams, serverCallService, $location, sessionService, constantService,objectService) {
+        ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService',
+            function ($scope, $routeParams, serverCallService, $location, sessionService, constantService) {
                 $scope.ob = "carrito";
                 $scope.op = "add";
                 //---
@@ -21,15 +21,15 @@ moduloCarrito.controller('CarritoAddController',
                 $scope.bean.cantidad = 0;
                 $scope.bean.id = $routeParams.id;
                 //---
-                $scope.objectService = objectService;
+                //$scope.objectService = objectService;
                 //---
                 
                 $scope.add = function () {
-                    serverCallService.add($scope.ob, $scope.id, $scope.cantidad).then(function (response) {
+                    serverCallService.add($scope.ob, $scope.bean.id, $scope.bean.cantidad).then(function (response) {
                         if (response.status == 200) {
                             if (response.data.status == 200) {
-                                $scope.bean.id = response.data.json;
-                                $scope.status = "El registro con id=" + $scope.id + " se ha añadido al carro.";
+                                $scope.bean.id = response.data.json[0].obj_plato.data.id;
+                                $scope.status = "Los objetos se han añadido al carrito de la compra.";
                            
                             } else {
                                 $scope.status = "Error en la recepción de datos del servidor ";

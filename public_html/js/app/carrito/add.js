@@ -25,7 +25,7 @@ moduloCarrito.controller('CarritoAddController',
                 //---
                 
                 $scope.add = function () {
-                    serverCallService.add($scope.ob, $scope.bean.id, $scope.bean.cantidad).then(function (response) {
+                    serverCallService.add($scope.ob, $scope.bean.cantidad,$scope.bean.id).then(function (response) {
                         if (response.status == 200) {
                             if (response.data.status == 200) {
                                 $scope.bean.id = response.data.json[0].obj_plato.data.id;

@@ -1,9 +1,9 @@
 'use strict';
-moduloCarrito.controller('CarritoPlistController',
+moduloCarrito.controller('CarritoListController',
         ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService',
             function ($scope, $routeParams, serverCallService, $location, sessionService, constantService) {
                 $scope.ob = "carrito";
-                $scope.op = "plist";
+                $scope.op = "list";
 
                 //---
                 $scope.url = $scope.ob + '/' + $scope.op;
@@ -13,10 +13,9 @@ moduloCarrito.controller('CarritoPlistController',
                 //---
                 serverCallService.list($scope.ob).then(function (response) {
                     if (response.status == 200) {
-                            $scope.bean = response.data.json;
+                            $scope.page = response.data.json;
                             $scope.metao = response.data.json.metaObject;
                             $scope.metap = response.data.json.metaProperties;
-
                     } else {
                         $scope.status = "Error en la recepción de datos del servidor";
                     }

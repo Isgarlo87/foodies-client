@@ -14,8 +14,6 @@ moduloCarrito.controller('CarritoListController',
                 serverCallService.list($scope.ob).then(function (response) {
                     if (response.status == 200) {
                             $scope.page = response.data.json;
-                            $scope.metao = response.data.json.metaObject;
-                            $scope.metap = response.data.json.metaProperties;
                     } else {
                         $scope.status = "Error en la recepción de datos del servidor";
                     }

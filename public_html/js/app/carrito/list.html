@@ -44,11 +44,18 @@ and open the template in the editor.
                             <table class="table table-responsive table-bordered table-hover table-striped table-condensed dataTable no-footer">
                                 <thead plistheader></thead>
                                 <tbody>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Imagen del Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio Unitario</th>
+                                <th>Acciones</th>
                                     <tr ng-repeat="oBean in page">
                                         <td><div><b>{{$index+1}}</b></div></td>
                                         <td><div><b>{{oBean.obj_plato.data.descripcion}}</b></div></td>
+                                        <td><div><img src="{{oBean.obj_plato.data.imagen}}" alt width="150" height="75"></img></div></td>
                                         <td><div><b>{{oBean.cantidad}}</b></div></td>
-                                        <td><div><b>{{oBean.obj_plato.data.id}}</b></div></td>
+                                        <td><div><b>{{oBean.obj_plato.data.precio}}</b></div></td>
                                 <!--
                                 <td ng-init="setShowRemove(true)" ng-repeat="oMetap in metap" class="text-right">
                                     <div class="text-center">{{oBean[oMetap.descripcion]}}</div>

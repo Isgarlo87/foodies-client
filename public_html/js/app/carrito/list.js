@@ -20,6 +20,9 @@ moduloCarrito.controller('CarritoListController',
                 }).catch(function (data) {
                     $scope.status = "Error en la recepción de datos del servidor";
                 });
+//                $scope.toBuy = function () {
+//                    $location.path('/carrito/buy/');
+//                };
                 $scope.back = function () {
                     window.history.back();
                 };

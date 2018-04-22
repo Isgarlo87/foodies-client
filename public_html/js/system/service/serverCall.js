@@ -108,8 +108,8 @@ moduloServicios.factory('serverCallService',
                     getMeta: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getmetadata', 'GET', '');
                     },
-                    add: function (strObject, cantidad, idForeign){
-                      return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=add' +'&cantidad=' + cantidad +'&id='+ idForeign, 'GET', '');
+                    add: function (strObject, cantidad, idForeign) {
+                        return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=add' + '&cantidad=' + cantidad + '&id=' + idForeign, 'GET', '');
                     },
                     list: function (strObject) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=list', 'GET', '');
@@ -121,6 +121,9 @@ moduloServicios.factory('serverCallService',
 
                     buy: function (strObject) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=buy', 'GET', '');
+                    },
+                    removeplato: function (strClass, id) {
+                        return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=removeplato&id=' + id, 'GET', '');
                     },
                     getSession: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getsessionstatus', 'GET', '');

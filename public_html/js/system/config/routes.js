@@ -136,7 +136,7 @@ foodies.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/extras/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ExtrasPlist1Controller', resolve: {auth: authenticationAdministratorPromise}});
         //------------Carrito -Not working
         $routeProvider.when('/carrito/list/:page?/:rpp?', {templateUrl: 'js/app/carrito/list.html', controller: 'CarritoListController', resolve: {auth: authenticationClientePromise}});
-        $routeProvider.when('/carrito/remove/:id', {templateUrl: 'js/app/carrito/remove.html', controller: 'CarritoRemoveController', resolve: {auth: authenticationClientePromise}});
+        $routeProvider.when('/carrito/removeplato/:id', {templateUrl: 'js/app/carrito/removeplato.html', controller: 'CarritoRemoveController', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/carrito/empty/', {templateUrl: 'js/app/carrito/empty.html', controller: 'CarritoEmptyController', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/carrito/buy/', {templateUrl: 'js/app/carrito/buy.html', controller: 'CarritoBuyController', resolve: {auth: authenticationClientePromise}});
         $routeProvider.when('/carrito/add/:id', {templateUrl: 'js/app/carrito/add.html', controller: 'CarritoAddController', resolve: {auth: authenticationClientePromise}});

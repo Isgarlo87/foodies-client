@@ -73,7 +73,7 @@ and open the template in the editor.
                                     </td> -->
                                     <td ng-if="!xob && !onlyview && !veredit" class="col-md-1">
                                         <div class="btn-toolbar" role="toolbar">
-                                            <a class="btn btn-default btn-xs" title="Remove" href="{{ob}}/{{profile}}/remove/{{oBean.id}}">
+                                            <a class="btn btn-default btn-xs" title="Remove" href="{{ob}}/removeplato/{{oBean.obj_plato.data.id}}">
                                                 <span class="glyphicon glyphicon-remove"></span>
                                             </a>
                                         </div>
@@ -84,16 +84,13 @@ and open the template in the editor.
                         </div>
 
                         <a class="glyphicon glyphicon-shopping-cart" id="comprar" href="{{ob}}/buy/"> Comprar</a>
-                        <a class="glyphicon glyphicon-trash" id="vaciar" ng-click=""> Vaciar</a>
+                        <a class="glyphicon glyphicon-trash" id="vaciar" href="{{ob}}/empty/"> Vaciar</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="panel-footer" style="font-family: Questrial, serif;" ng-include="'js/system/include/footer.html'"></div>
     </div>
-</div>
-</div>
-</div>
 </div>
 
 

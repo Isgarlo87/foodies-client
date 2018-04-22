@@ -11,14 +11,14 @@ and open the template in the editor.
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <header ob="ob" title="'Borrado de ' + objectService.getName(ob)"></header>
+                         <header ob="ob" op="op"></header>
                     </div>
                     <div class="panel-body">
                         <div class="row-fluid" ng-if="status">
                             <div class="col-xs-12">
-                                <div class="alert alert-danger" role="alert">
+                                <div class="alert alert-success" role="alert">
                                     <br>
-                                    <h3 class="bg-danger">{{status}}</h3>
+                                    <h3 class="bg-success">{{status}}</h3>
                                     <br>
                                     <a class="btn btn-default" ng-click="back()">Volver</a>
                                 </div>
@@ -30,7 +30,7 @@ and open the template in the editor.
                                 <div class="control-group text-right">
                                     <div class="controls">
                                         <div>¿Está seguro de que desea vaciar el carro?</div>
-                                        <a class="btn btn-danger" ng-click="empty()">Si</a>
+                                        <a class="btn btn-success" ng-click="empty()">Si</a>
                                         <a class="btn btn-default" ng-click="back()">No</a>
                                     </div>
                                 </div>

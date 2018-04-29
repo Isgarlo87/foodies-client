@@ -6,8 +6,8 @@
 
 'use strict';
 moduloCarrito.controller('CarritoBuyController',
-        ['$scope', '$routeParams', '$location', 'serverCallService', 'sessionService', 'constantService',
-            function ($scope, $routeParams, $location, serverCallService, sessionService, constantService) {
+        ['$scope', '$location', 'serverCallService', 'constantService',
+            function ($scope, $location, serverCallService, constantService) {
                 $scope.ob = "carrito";
                 $scope.op = "buy";
 
@@ -17,17 +17,29 @@ moduloCarrito.controller('CarritoBuyController',
                 $scope.url = $scope.ob + '/' + $scope.op;
                 //----
 
-                $scope.buy = function () {
+                $scope.buy = function ()
+                {
                     serverCallService.buy($scope.ob).then(function (response) {
-                        if (response.status == 200) {
-                                $scope.status = response.json;
-                            } else {
-                                $scope.status = "Error en la recepción de datos del servidor 1 ";
-                            }
+                        if (response.data.status == 200) {
+                            $scope.status = response.data.json;
+                        } else {
+                            $scope.status = "Error en la recepción de datos del servidor 1";
+                        }
                     }).catch(function (data) {
-                        $scope.status = "Error en la recepción de datos del servidor 2 ";
+                        $scope.status = "Error em la recepción de datos del servidor 2";
                     });
-                };
+                }
+//                $scope.buy = function () {
+//                    serverCallService.buy($scope.ob).then(function (response) {
+//                        if (response.status == 200) {
+//                                $scope.status = response.json;
+//                            } else {
+//                                $scope.status = "Error en la recepción de datos del servidor 1 ";
+//                            }
+//                    }).catch(function (data) {
+//                        $scope.status = "Error en la recepción de datos del servidor 2 ";
+//                    });
+//                };
                 $scope.back = function () {
                     window.history.back();
                 };

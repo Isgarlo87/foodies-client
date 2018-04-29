@@ -150,7 +150,7 @@
 
             <ul class="nav navbar-nav navbar-right">                              
                 <!-- <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
-                 <li ng-class="{ active: mn.isActive('/carrito')}"><a href="carrito/list"><i class="fa fa-shopping-cart"></i></a></li>
+                 <li ng-class="{ active: mn.isActive('/carrito')}" ng-if="mn.session_info.obj_tipousuario.data.id == 3" ><a href="carrito/list"><i class="fa fa-shopping-cart"></i></a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-user"></i>

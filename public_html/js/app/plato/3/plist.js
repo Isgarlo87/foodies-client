@@ -27,8 +27,8 @@
  */
 'use strict';
 moduloPlato.controller('PlatoPlist3Controller',
-        ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
-            function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
+        ['$scope', '$routeParams', '$location', 'serverCallService', 'sessionServerCallService', 'toolService', 'constantService',
+            function ($scope, $routeParams, $location, serverCallService, sessionServerCallService, toolService, constantService) {
                 $scope.ob = "plato";
                 $scope.op = "plist";
                 $scope.profile = 3;
@@ -47,7 +47,14 @@ moduloPlato.controller('PlatoPlist3Controller',
                 $scope.debugging = constantService.debugging();
                 //---
                 function getDataFromServer() {
-                    serverCallService.getCount($scope.ob, $scope.filterParams).then(function (response) {
+                    sessionServerCallService.checkSession().then(function (response) {
+                        if (response.status == 200) {
+                            $scope.botonadd = response.data.json.data.obj_tipousuario.data.id;
+                            return serverCallService.getCount($scope.ob, $scope.filterParams);
+                        } else {
+                            $scope.status = "Error en la recepción de datos del servidor";
+                        }
+                    }).then(function (response) {
                         if (response.status == 200) {
                             $scope.registers = response.data.json;
                             $scope.pages = toolService.calculatePages($scope.rpp, $scope.registers);

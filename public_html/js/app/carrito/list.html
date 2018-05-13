@@ -45,7 +45,7 @@ and open the template in the editor.
                             <table class="table table-responsive table-bordered table-hover table-striped table-condensed dataTable no-footer">
                                 <thead></thead>
                                 <tbody>
-                                <th>Id</th>
+                         <!--   <th>Id</th> -->
                                 <th>Nombre</th>
                                 <th>Imagen del Producto</th>
                                 <th>Cantidad</th>
@@ -53,7 +53,7 @@ and open the template in the editor.
                                 <th>Acciones</th>
 
                                 <tr ng-repeat="oBean in page">
-                                    <td><div><b>{{$index + 1}}</b></div></td>
+                     <!--           <td><div><b>{{$index + 1}}</b></div></td>  -->
                                     <td><div><b>{{oBean.obj_plato.data.descripcion}}</b></div></td>
                                     <td><div><img src="{{oBean.obj_plato.data.imagen}}" alt width="150" height="75"></img></div></td>
                                     <td><div><b>{{oBean.cantidad}}</b></div></td>

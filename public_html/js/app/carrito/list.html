@@ -45,7 +45,7 @@ and open the template in the editor.
                             <table class="table table-responsive table-bordered table-hover table-striped table-condensed dataTable no-footer">
                                 <thead></thead>
                                 <tbody>
-                         <!--   <th>Id</th> -->
+                                    <!--   <th>Id</th> -->
                                 <th>Nombre</th>
                                 <th>Imagen del Producto</th>
                                 <th>Cantidad</th>
@@ -53,7 +53,7 @@ and open the template in the editor.
                                 <th>Acciones</th>
 
                                 <tr ng-repeat="oBean in page">
-                     <!--           <td><div><b>{{$index + 1}}</b></div></td>  -->
+                                    <!--           <td><div><b>{{$index + 1}}</b></div></td>  -->
                                     <td><div><b>{{oBean.obj_plato.data.descripcion}}</b></div></td>
                                     <td><div><img src="{{oBean.obj_plato.data.imagen}}" alt width="150" height="75"></img></div></td>
                                     <td><div><b>{{oBean.cantidad}}</b></div></td>
@@ -82,9 +82,9 @@ and open the template in the editor.
                                 </tbody>
                             </table>
                         </div>
+                        <a class="glyphicon glyphicon-trash btn btn-danger " id="vaciar" style="float: right " href="{{ob}}/empty/"> Vaciar</a>
+                        <a class="glyphicon glyphicon-shopping-cart btn btn-primary" id="comprar" style="float: right " href="{{ob}}/buy/"> Comprar</a>
 
-                        <a class="glyphicon glyphicon-shopping-cart btn btn-primary" id="comprar" href="{{ob}}/buy/"> Comprar</a>
-                        <a class="glyphicon glyphicon-trash btn btn-danger " id="vaciar" href="{{ob}}/empty/"> Vaciar</a>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ and open the template in the editor.
                                 <div class="form-group" id="cantidad-group"
                                      ng-class="{'has-error':(outerForm.cantidad.$error.pattern && !outerForm.cantidad.$pristine) ||
                                              (outerForm.cantidad.$error.required && !outerForm.cantidad.$pristine)}">
-                                    <label class="control-label col-sm-2" for="iva">
+                                    <label class="control-label col-sm-2" for="cantidad">
                                         <span ng-show="true">*</span>
                                         Cantidad
                                     </label>
@@ -39,13 +39,13 @@ and open the template in the editor.
                                                class="form-control"
                                                id="cantidad"
                                                name="cantidad"
-                                               ng-pattern=""
+                                               ng-pattern="[0-9]*"
                                                placeholder="Cantidad"
-                                               maxlength="100"
+                                               maxlength="10"
                                                ng-required="true"
                                                />
                                         <span class="help-block" ng-if="!outerForm.cantidad.$pristine && outerForm.cantidad.$error.required">El campo es obligatorio</span>
-                                        <span class="help-block" ng-if="!outerForm.cantidad.$pristine && outerForm.cantidad.$error.pattern">El campo no tiene formato adecuado: Los nombres deben comenzar con mayúsculas.</span>
+                                        <span class="help-block" ng-if="!outerForm.cantidad.$pristine && outerForm.cantidad.$error.pattern">El campo no tiene formato adecuado: Solo dígitos.</span>
                                     </div>
                                 </div>
                                 <div class="control-group text-right">
